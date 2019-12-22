@@ -1,3 +1,6 @@
+# Backgroun
+This repository is copied from my GitHub account at http://github.ncsu.edu/. It is a course project.
+
 # Project Details 
 
 
