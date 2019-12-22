@@ -1,0 +1,47 @@
+{
+  "name": "guerdon-bot",
+  "version": "1.0.0",
+  "description": "Guerdon-bot",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec test/*.js",
+    "start": "node src/app.js"
+  },
+  "keywords": [
+    "mattermost",
+    "guerdon",
+    "bot"
+  ],
+  "contributors": [
+    {
+      "name": "Akanksha Mohan",
+      "email": "amohan7@ncsu.edu"
+    },
+    {
+      "name": "Amogh Agnihotri Subbanna",
+      "email": "aagniho@ncsu.edu",
+      "url": "https://amoghagnihotri.com/"
+    },
+    {
+      "name": "Harsh Rajendra Shah",
+      "email": "hshah3@ncsu.edu"
+    },
+    {
+      "name": "Sayali Vinayak Dhavale",
+      "email": "sdhaval@ncsu.edu"
+    }
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "mattermost-client": "^6.1.2",
+    "request": "2.81.0",
+    "got": "^9.6.0",
+    "puppeteer": "^1.20.0",
+    "sentiment": "^5.0.2"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^6.2.1",
+    "nock": "11.1.0"
+  }
+}

@@ -1,0 +1,29 @@
+---
+version: "3"
+
+networks:
+  my_network:
+    driver: bridge
+
+services:
+  bot:
+    env_file:
+        .env
+    build: ./bot
+    container_name: bot
+    environment:
+        - BOTTOKEN=${BOTTOKEN}
+    networks:
+        - my_network
+    depends_on:
+        - classifier
+
+  classifier:
+    build: ./classifier
+    container_name: classifier
+    expose:
+        - 8000
+    ports:
+        - 8000:8000
+    networks:
+        - my_network

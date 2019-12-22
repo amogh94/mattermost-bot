@@ -1,0 +1,46 @@
+
+---
+- hosts: webserver
+  gather_facts: false
+  become: yes
+
+  vars:
+    repo_path: cloned_repo_dir/
+    repo_url: git@github.ncsu.edu:csc510-fall2019/CSC510-13.git
+
+  pre_tasks:
+    - name: update apt-get cache
+      command: apt-get update
+      become: yes
+      
+    - name: "Install apt packages"
+      apt:
+        name:
+          - docker
+          - docker-compose
+        update_cache: yes
+
+  tasks:
+    - name: "Copy GitHub credentials"
+      copy:
+        directory_mode: yes
+        dest: /root
+        src: /root/.ssh
+        mode: "preserve"
+    - name: "Enable GitHub credentials"
+      shell: |
+        eval `ssh-agent -s` && ssh-add ~/.ssh/id_rsa
+    - name: "Clone the given repo"
+      git:
+        repo: git@github.ncsu.edu:csc510-fall2019/CSC510-13.git
+        version: master
+        dest: "{{ repo_path }}"
+      become: yes
+    - name: "Setup environment variables in remotes"
+      copy:
+        src: .env
+        dest: "{{ repo_path }}.env"
+    - name: "Set google token in remotes"
+      copy:
+        src: token.pickle
+        dest: "{{ repo_path }}classifier/"

@@ -1,0 +1,67 @@
+{
+  "trainClassifier": {
+    "message": "Classifier is being trained. Please check the status at https://drive.google.com/9udg98w7x ",
+    "url": "https://drive.google.com/9udg98w7x"
+  },
+  "trainClassifierFailed": {
+    "message": "Bad Request"
+  },
+  "testClassifier": {
+    "sentiment": "positive"
+  },
+  "testClassifierFailed": {
+  },
+  "testGuerdon": {
+    "sentiment": "positive"
+  },
+  "testGuerdonFailed": {
+    
+  },
+  "mattermostAPIFailed":{
+
+  },
+  "mattermostChannelPosts": [{
+    "order": [
+      "384yoweu",
+      "fhgwi4iwr"
+    ],
+    "posts": {
+      "fhgwi4iwr": {
+        "message": "Any message",
+        "user_id": "user0"
+      },
+      "384yoweu": {
+        "message": "Some other message",
+        "user_id": "user2"
+      }
+    },
+    "next_post_id": "i9834sf",
+    "prev_post_id": "afq437gn"
+  },{
+    "order": [
+      "i9834sf",
+      "sriutsr8o57"
+    ],
+    "posts": {
+      "i9834sf": {
+        "message": "Any message pg2",
+        "user_id": "user1"
+      },
+      "sriutsr8o57":{
+        "message": "Any other message pg2",
+        "user_id": "user12"
+      }
+    },
+    "prev_post_id": "384yoweu"
+  }],
+  "mattermostUserMessages":{
+    "user0": [{
+        "message": "Any message", 
+        "sentiment": 0 
+    }],
+    "user2": [{
+        "message": "Some other message", 
+        "sentiment": 0 
+    }]
+  }
+}

@@ -1,0 +1,8 @@
+classifier/__pycache__
+.env
+bot/node_modules
+.idea/
+classifier/__init__.py
+classifier/test/__init__.py
+classifier/token.pickle
+.vscode/

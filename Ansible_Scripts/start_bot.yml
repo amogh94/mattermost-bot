@@ -1,0 +1,16 @@
+- hosts: webserver
+  gather_facts: false
+  become: yes
+
+  vars:
+    repo_path: cloned_repo_dir/
+
+  tasks:
+  - name: "Run the project"
+    docker_compose:
+      project_src: "{{ repo_path }}"
+      build: yes
+      restarted: yes
+      state: present
+    async: 180
+    become: yes
